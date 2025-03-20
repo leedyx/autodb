@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: 'jdbc:mysql://192.168.5.4:33060/cdc?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=GMT%2B8'
+    username: ""
+    password: ""
+    hikari:
+      connection-timeout: 30000 # 连接超时时间（毫秒）
+      idle-timeout: 600000      # 空闲连接存活时间（毫秒）
+      max-lifetime: 1800000     # 连接最大存活时间（毫秒）
+      maximum-pool-size: 20     # 最大连接池大小
+      minimum-idle: 5           # 最小空闲连接数
+      pool-name: HikariCP-CDC   # 连接池名称
+      connection-test-query: SELECT 1 # 连接测试查询（MySQL推荐使用）

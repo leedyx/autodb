@@ -1,4 +1,6 @@
 CREATE TABLE all_integer_types (
+
+    `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     -- 有符号类型
     tinyint_col TINYINT,
     smallint_col SMALLINT,
@@ -15,6 +17,7 @@ CREATE TABLE all_integer_types (
 );
 
 CREATE TABLE all_string_types (
+    `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     -- 定长字符串
     char_col CHAR(10),
     binary_col BINARY(20),
@@ -41,6 +44,7 @@ CREATE TABLE all_string_types (
 );
 
 CREATE TABLE all_date_types (
+    `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     -- 日期类型
     date_col DATE,
 
@@ -61,6 +65,7 @@ CREATE TABLE all_date_types (
 );
 
 CREATE TABLE all_float_types (
+    `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     -- 单精度浮点数
     float_col FLOAT(5,2),     -- 总位数5，小数位2
     float_no_precision FLOAT, -- 不指定精度

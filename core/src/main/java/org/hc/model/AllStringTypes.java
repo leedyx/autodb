@@ -12,7 +12,7 @@ import lombok.Data;
 public class AllStringTypes {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
 
     // 定长字符串

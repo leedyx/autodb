@@ -13,7 +13,7 @@ import java.math.BigInteger;
 @Entity(name="all_integer_types")
 public class AllIntegerTypes {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
 
     // 有符号类型

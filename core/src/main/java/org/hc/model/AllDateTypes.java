@@ -16,7 +16,7 @@ import java.time.Year;
 @Entity(name = "all_date_types")
 public class AllDateTypes {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "date_col")

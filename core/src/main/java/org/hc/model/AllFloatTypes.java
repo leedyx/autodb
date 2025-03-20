@@ -13,17 +13,17 @@ import java.math.BigDecimal;
 @Entity(name = "all_float_types")
 public class AllFloatTypes {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "float_col", precision = 5, scale = 2)
-    private Float floatCol;
+    private BigDecimal floatCol;
 
     @Column(name = "float_no_precision")
     private Float floatNoPrecision;
 
     @Column(name = "double_col", precision = 10, scale = 4)
-    private Double doubleCol;
+    private BigDecimal doubleCol;
 
     @Column(name = "double_no_precision")
     private Double doubleNoPrecision;
